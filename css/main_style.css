@@ -1,0 +1,18 @@
+/*
+Colorblind safe color palette from colorbrewer2.org.
+#d7191c - red
+#fdae61 - orange
+#ffffbf - yellow
+#abd9e9 - light blue
+#2c7bb6 - blue
+*/
+
+body{
+  background-color: #abd9e9;
+  color: #2c7bb6;
+  text-align: center;
+}
+
+h1 {
+  color: #fdae61
+}
