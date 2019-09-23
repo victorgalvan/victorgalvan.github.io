@@ -7,12 +7,52 @@ Colorblind safe color palette from colorbrewer2.org.
 #2c7bb6 - blue
 */
 
-body{
-  background-color: #abd9e9;
-  color: #2c7bb6;
-  text-align: center;
+#header /* The background color of my header was changed to a dark blue*/ {
+  background-color: #2c7bb6;
 }
 
-h1 {
-  color: #fdae61
+h1 /* Color of the text in my header changed to orange; The space around
+the content was separted by 10px to its border; Declared the margin of the
+content to 0 */ {
+ color: #fdae61;
+ padding: 10px;
+ margin: 0;
+}
+
+#body-container /* background color changed to light blue; maximum width is
+1000px; the browser declares a margin; sets the height to be 100vh; the border
+to be 2px in size and a solid blue; 25px value applies to the radius of all
+four corners of the element */ {
+  background-color: #abd9e9;
+  max-width: 1000px;
+  margin: auto;
+  height: 100vh;
+  border: 2px solid #2c7bb6
+  border-radius: 25px;
+}
+
+body /* background color changed to orange; the text color to black; aligned the
+text to the center and specified the margin to 0 */ {
+  background-color: #fdae61;
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+
+#profile-picture /* set my picture to float to the left of it's container*/ {
+  float: left;
+}
+
+#welcome-text /* changed the space between my content from the top of its border
+to 25px; font size change to 20 px */{
+  padding-top: 25px;
+  font-size: 20px;
+}
+
+#research-interests /* Text is aligned to the left and font size set to 20px;
+relative to it's normal position */ {
+  text-align: left;
+  font-size: 20px;
+  position: relative;
+  left: 50px;
 }
