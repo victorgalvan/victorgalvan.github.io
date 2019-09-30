@@ -10,13 +10,16 @@
   <div id="body-container">
     <div id="header">
       <script src="javascript/external.js"></script>
-      <h1> Hello, welcome <script> document.write(user_name); </script> </h1>
+      <h1> Hello, welcome
+    <script>
+      document.write(user_name);
+    </script> </h1>
     </div>
     <div id="profile-picture">
       <img src=images/profile-picture.jpg width=500px height=500px/>
     </div>
     <div id="welcome-text">
-      Welcome to my webpage.<br>
+      My name is Victor Galvan. <br>
       I am a student in the
     <a href="https://www.geo.txstate.edu/">Geography Department</a> at
     <a href="https://txstate.edu/"> Texas State University</a>.
@@ -28,6 +31,16 @@
       <li>Cartography and Design</li>
       <li>Architecture</li>
     </ol>
+  </div>
+  <div id="copyright">
+    <script>
+    // Comment here
+    var today= new Date();
+    // Comment here
+    var year= today.getFullYear();
+    // Comment here
+    document.writeln("Copyright &copy;" + year);
+    </script>
   </div>
 </div>
 </body>

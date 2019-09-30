@@ -56,3 +56,10 @@ relative to it's normal position */ {
   position: relative;
   left: 50px;
 }
+
+#copyright {
+  position: absolute;
+  width: 1000px;
+  text-align: center;
+  bottom: 20px;
+}
