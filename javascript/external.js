@@ -44,5 +44,5 @@ function welcome ()
   return message
 }
 
-document.write(welcome());
+//document.write(welcome());
 //document.write(let message);
