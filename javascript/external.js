@@ -31,6 +31,17 @@
 //    document.writeln("You chose Cancel!");
 //  }
 //}
+var webmaps =
+  [
+    ["True Size",
+    "https://thetruesize.com/",
+    "The purpose of this website was to compare the size of a state or country to other states and countries by allowing the user to search for a specific region and dragging it to another region of the world."
+    ],
+    ["In Flight",
+    "https://www.theguardian.com/world/",
+    "This web map is used as a way to celebrate 100 years of passenger air travel. The map is intuitive with clear instructions on how to get started. We are presented with interactive map letting the user to slide through different times of day on May 5th of 2014 or we have the option of using the map and a video with a voiceover that informs the audience with interesting facts. It correlates to the number of planes in flight during that specific time and the direction in which it was going. ",
+    ]
+  ];
 function welcome ()
 {
   let a = "Please enter your name.";
@@ -50,12 +61,12 @@ function welcome ()
 function webmap_table()
 {
   document.write("<table width=100%>");
-  for (var row=0; row < 2; row++)
+  for (var row=0; row < webmaps.length; row++)
   {
     document.write("<tr>");
-    for (var column=0; column < 3; column++)
+    for (var column=0; column < webmaps [0].length; column++)
     {
-      document.write("<td>" + row + "," + column + "</td>");
+      document.write("<td>" + webmaps[row][column] + "</td>");
     }
     document.write("</tr>");
   }
