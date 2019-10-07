@@ -7,9 +7,9 @@
 //const out = x+y;
 //document.write(out);
 // A prompt box is used to prompt users to input a value before entering a page.
-user_name=window.prompt("Please enter your name", "Type your name here");
-const x= user_name
-const out= x
+//user_name=window.prompt("Please enter your name", "Type your name here");
+//const x= user_name
+//const out= x
 //document.write(out);
 //document.write(user_name);
 //x=22;
@@ -31,3 +31,18 @@ const out= x
 //    document.writeln("You chose Cancel!");
 //  }
 //}
+function welcome ()
+{
+  let a = "Please enter your name.";
+  let b = "Type your name here.";
+
+  // A prompt is used to prompt users to input a value before entering a page.
+  user_name = window.prompt(a, b);
+
+  message = "<h1>Hello, welcome to my webpage, " + user_name +"!</h1>"
+
+  return message
+}
+
+document.write(welcome());
+//document.write(let message);
