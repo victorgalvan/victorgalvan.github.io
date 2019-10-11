@@ -69,7 +69,7 @@ function webmap_table()
       if (column <2) {
         document.write("<td>" + webmaps[row][column] + "</td>");
       } else {
-        document.write("</tr><tr><td colspan='2'>" + webmaps[row][column] + "<p></td></tr>");
+        document.write("</tr><tr><td colspan='2'>" + webmaps[row][column] + "<p><p></td></tr>");
       }
 
     }
