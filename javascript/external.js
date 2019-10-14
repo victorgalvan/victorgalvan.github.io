@@ -39,7 +39,7 @@ var webmaps =
     ],
     ["In Flight",
     "https://www.theguardian.com/world/",
-    "This web map is used as a way to celebrate 100 years of passenger air travel. The map is intuitive with clear instructions on how to get started. We are presented with interactive map letting the user to slide through different times of day on May 5th of 2014 or we have the option of using the map and a video with a voiceover that informs the audience with interesting facts. It correlates to the number of planes in flight during that specific time and the direction in which it was going. ",
+    "This web map is used as a way to celebrate 100 years of passenger air travel.  We are presented with an interactive map letting the user to slide through different times of day on May 5th of 2014. It correlates to the number of planes in flight during that specific time and the direction in which it was going. ",
     ]
   ];
 function welcome ()
@@ -66,7 +66,12 @@ function webmap_table()
     document.write("<tr>");
     for (var column=0; column < webmaps [0].length; column++)
     {
-      document.write("<td>" + webmaps[row][column] + "</td>");
+      if (column <2) {
+        document.write("<td>" + webmaps[row][column] + "</td>");
+      } else {
+        document.write("</tr><tr><td colspan='2'>" + webmaps[row][column] + "<p><p></td></tr>");
+      }
+
     }
     document.write("</tr>");
   }
