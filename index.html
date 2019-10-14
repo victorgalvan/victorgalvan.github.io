@@ -1,7 +1,18 @@
 <!doctype html>
 <html>
 <head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+integrity=sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==
+crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+integrity=sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==
+crossorigin="">
+</script>
+  <link rel="stylesheet" type="text/css" href="css/map_style.css">
   <script src="javascript/external.js"></script>
+  <script src="javascript/secret_keys.js"></script>
   <title>Victor Galvan</title>
   <!-- All styling for this HTML document are contained in this external css
   file -->
@@ -33,14 +44,25 @@
   </div>
   <div id="webmap-reviews">
     <h3 style="font-size:20px; text-align: left;
-    position: absolute;">Webmap Reviews</h3>
+    position: absolute;"> Webmap Reviews</h3>
     <br>
     <br>
     <script>
     webmap_table();
     </script>
   </div>
-  <div id="copyright">
+  <h3>My First Webmap</h3>
+  <div id="mapid" style="width: 600px; height: 400px; margin: auto;">
+  <script>
+    var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+      maxZoom: 18,
+      id: 'mapbox.mapbox-traffic-v1',
+      accessToken: mapbox_access_token
+    }).addTo(mymap);
+    </script>
+  </div>
+    <div id="copyright">
     <script>
     // Creates a new date object with the current date and time.
     var today= new Date();
