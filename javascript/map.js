@@ -14,6 +14,13 @@
   */
   L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
   }).addTo(mymap);
+  var marker = L.marker([27.174961, 78.042385]). addTo(mymap);
+  var marker = L.marker([40.334245, 116.477652]). addTo(mymap);
+  var marker = L.marker([30.328611, 35.441944]). addTo(mymap);
+  var marker = L.marker([-22.951389, -43.2108334]). addTo(mymap);
+  var marker = L.marker([-13.163056, -72.545556]). addTo(mymap);
+  var marker = L.marker([20.682778, -88.569167]). addTo(mymap);
+  var marker = L.marker([41.890169, 12.492269]). addTo(mymap);
   /*
   var marker = L.marker([51.5, -0.09]).addTo(mymap);
   var circle = L.circle([51.508, -0.11], {
