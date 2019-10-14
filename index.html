@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
 <head>
+<<<<<<< HEAD
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
@@ -11,6 +12,19 @@ integrity=sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDk
 crossorigin="">
 </script>
   <link rel="stylesheet" type="text/css" href="css/map_style.css">
+=======
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin="">
+  </script>
+  <link rel="stylesheet" type="text/css" href="css/map_style.css">
+  <script src="javascript/secret_keys.js"></script>
+>>>>>>> 685409d9f97b4633ce5c889c00df8491eac3735c
   <script src="javascript/external.js"></script>
   <script src="javascript/secret_keys.js"></script>
   <title>Victor Galvan</title>
@@ -51,8 +65,13 @@ crossorigin="">
     webmap_table();
     </script>
   </div>
+<<<<<<< HEAD
   <h3>My First Webmap</h3>
   <div id="mapid" style="width: 600px; height: 400px; margin: auto;">
+=======
+  <h3>My first Webmap</h3>
+  <div id="mapid" style="width:600px; height:400px; margin: auto;">
+>>>>>>> 685409d9f97b4633ce5c889c00df8491eac3735c
   <script>
     var mymap = L.map('mapid').setView([51.505, -0.09], 13);
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
@@ -60,8 +79,40 @@ crossorigin="">
       id: 'mapbox.mapbox-traffic-v1',
       accessToken: mapbox_access_token
     }).addTo(mymap);
+<<<<<<< HEAD
     </script>
   </div>
+=======
+    var marker = L.marker([51.5, -0.09]).addTo(mymap);
+    var circle = L.circle([51.508, -0.11], {
+      color: 'red',
+      fillColor: '#f03',
+      fillOpacity: 0.5,
+      radius: 500
+    }).addTo(mymap);
+    var polygon = L.polygon([
+      [51.509, -0.08],
+      [51.503, -0.06],
+      [51.51, -0.047]
+    ]).addTo(mymap);
+    marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+    circle.bindPopup("I am a circle.");
+    polygon.bindPopup("I am a polygon.");
+
+    marker.on('click', function (e){
+      mymap.setView(e.latlng, 14);
+    });
+
+    circle.on('click', function (e){
+      mymap.setView(e.latlng, 13);
+    });
+
+    polygon.on('click', function (e){
+      mymap.setView(e.latlng, 13);
+    });
+  </script>
+    </div>
+>>>>>>> 685409d9f97b4633ce5c889c00df8491eac3735c
     <div id="copyright">
     <script>
     // Creates a new date object with the current date and time.
