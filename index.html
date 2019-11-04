@@ -53,15 +53,49 @@
     webmap_table();
     </script>
   </div>
-  <h3>Geocoding Map</h3>
-  <div id="mapid" style="width:600px; height:400px; margin: auto;">
-  <script src="javascript/map.js"></script>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Lab 7 Links</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="https://victorgalvan.github.io/simple_mapping.html" target="_blank">Simple Mapping</a>
+      <a href="https://victorgalvan.github.io/tile_layer.html" target="_blank">Tile Layer</a>
+      <a href="https://victorgalvan.github.io/dynamic_layers.html" target="_blank">Dynamic Layers</a>
+      <a href="https://victorgalvan.github.io/on_event.html" target="_blank">On Event</a>
+      <a href="https://victorgalvan.github.io/basemap_gallery.html" target="_blank">Basemap Gallery</a>
+      <a href="https://victorgalvan.github.io/query_task.html" target="_blank">Query Task</a>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div id="copyright">
+  </div>
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+<br>
+<h3>Geocoding Map</h3>
+<div id="mapid" style="width:600px; height:400px; margin: auto;">
+<script src="javascript/map.js"></script>
+  </div>
+<br>
+<br>
+<br>
+<br>
+<div id="copyright">
     <script>
     // Creates a new date object with the current date and time.
     var today= new Date();
